@@ -1,0 +1,190 @@
+/* 1. Importación de Fuentes Elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* 2. Video de Fondo */
+#miVideoFondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.4);
+}
+
+/* 3. Menú Superior (Fijo) */
+.Menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 30px;
+    gap: 30px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 4px solid #92908b; 
+}
+
+.Menu li { margin: 0 15px; }
+
+.Menu li a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.Menu li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+/* 4. Sección Hero (Título Mercurio) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 10vw, 8rem); /* Tamaño fluido */
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+/* 5. Tarjetas de Información */
+/* Contenedor que agrupa las 3 secciones */
+.info-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 100px 20px;
+    flex-wrap: wrap; /* Para que en celulares se pongan una abajo de otra */
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Cada tarjeta individual (Efecto de la imagen) */
+.planeta {
+    background: rgba(255, 255, 255, 0.05); /* Fondo oscuro transparente */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    flex: 1; /* Hace que todas midan lo mismo */
+    min-width: 300px; /* Ancho mínimo para que no se vean muy flacas */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.planeta:hover {
+    transform: translateY(-10px); /* Se eleva al pasar el mouse */
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos dentro de las tarjetas */
+.planeta h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Imágenes dentro de las tarjetas */
+.planeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Para que el logo o planeta no se corte */
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+/* Texto dentro de las tarjetas */
+.planeta li {
+    list-style: none;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+/* 6. Álbum de Fotos (Slider) */
+.titulo-album {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin: 80px 0 30px;
+}
+
+.slider {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    margin: 0 auto 100px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none; /* Se controlará con tu JS */
+}
+
+.slider img.activo {
+    display: block;
+    animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

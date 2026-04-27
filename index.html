@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleindex.css">
+    <title>Proyecto Final</title>
+</head>
+<body>
+    <div class="contenedor-video">
+    <video autoplay muted loop playsinline id="miVideoFondo">
+        <source src="fondo/fondoindex.mp4" type="video/mp4">
+    </video>
+    
+</div>
+
+  <header>
+ <div class="hero-section">
+    <p class="subtitle">Planet</p>
+    <h1>SPACE</h1>
+    <p class="description">
+        Explora los misterios del cosmos y descubre los secretos que guardan 
+        los gigantes de nuestro sistema solar.
+    </p>
+    <a href="registrate.html" class="btn-start">Empezar</a>
+</div>
+  </header>
+  <nav class="Menu">
+    <li><a href="mercurio.html">Mercurio</a></li>
+    <li><a href="venus.html">Venus</a></li>
+    <li><a href="tierra.html">Tierra</a></li>
+    <li><a href="marte.html">Marte</a></li>
+    <li><a href="jupiter.html">Júpiter</a></li>
+    <li><a href="saturno.html">Saturno</a></li>
+    <li><a href="urano.html">Urano</a></li>
+    <li><a href="neptuno.html">Neptuno</a></li>
+    <li><a href="registrate.html">registrate</a></li>
+  </nav>
+
+<footer class="footer">
+    <div class="contenedor-qr">
+    <h3>¡Escanea para compartir!</h3>
+    <div id="codigo-qr"></div>
+    </div>
+    <div class="redes">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <a href="https://www.facebook.com/NASA"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/teslamotors/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@veritasium?lang=en"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/nasa"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2026 Planets - Todos los derechos reservados Piero Jesus Taquia Cajavilca</p>
+</footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+<script>
+    // Seleccionamos el contenedor
+    const contenedorQR = document.getElementById('codigo-qr');
+
+    // Generamos el QR
+    new QRCode(contenedorQR, {
+        text: "https://pierotaquiacajavilca-cyber.github.io/MiWeb3/", // Aquí pones tu URL real
+        width: 150,
+        height: 150,
+        colorDark: "#0b0f19", // Color oscuro (puedes usar el de tu root)
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H
+    });
+</script>
+</body>
+</html>

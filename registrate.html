@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleregister.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+     <div class="contenedor-video">
+    <video autoplay muted loop playsinline id="miVideoFondo">
+        <source src="https://www.pexels.com/es-es/download/video/36032938/" type="video/mp4">
+
+        Tu navegador no soporta videos.
+    </video>
+</div>
+<nav class="Menu">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="mercurio.html">Mercurio</a></li>
+    <li><a href="venus.html">Venus</a></li>
+    <li><a href="tierra.html">Tierra</a></li>
+    <li><a href="marte.html">Marte</a></li>
+    <li><a href="jupiter.html">Júpiter</a></li>
+    <li><a href="saturno.html">Saturno</a></li>
+    <li><a href="urano.html">Urano</a></li>
+    <li><a href="neptuno.html">Neptuno</a></li>
+    <li><a href="registrate.html">registrate</a></li>
+  </nav>
+  <div class="contenedor">
+    <h2>Registrate</h2>
+    <form action="https://formsubmit.co/pierotaquiacajavilca@gmail.com" method="post">
+        <label for="nombre">Ingresar Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder=Ingrese su nombre, required=Ingresar texto>
+
+        <label for="correo">Ingresar correo</label>
+        <input type="text" name="correo" id="correo" placeholder=ingresa tu correo electronico, required=Ingresar texto>
+
+        <label for="edad">ingresar edad</label>
+        <input type="number" name="edad" id="edad" placeholder="ingresa tu edad" min="15" required>
+
+        <label for="genero">Género</label>
+        <select required>
+            <option value="">seleccione</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+            <option>Otro</option>
+        </select>
+        <button type="submit">Enviar</button>
+
+    </form>
+  </div>
+</body>
+</html>
